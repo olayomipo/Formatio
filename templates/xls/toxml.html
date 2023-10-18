@@ -1,0 +1,17 @@
+{% extends "xls/base_xls.html" %}
+{% load static %}
+
+
+{% block h1 %}
+    Convert your excel file into a xml
+{% endblock h1 %}
+
+
+
+{% block form %}
+<form  method="post" action="/xls/toxml" enctype="multipart/form-data">        
+{% endblock form %}
+
+{% block href_back %}
+href="/xls/toxml" 
+{% endblock href_back %}

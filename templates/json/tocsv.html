@@ -1,0 +1,19 @@
+
+
+{% extends "json/base_json.html" %}
+{% load static %}
+
+
+{% block h1 %}
+    Convert your json file into a csv
+{% endblock h1 %}
+
+
+
+{% block form %}
+<form  method="post" action="/json/tocsv" enctype="multipart/form-data">        
+{% endblock form %}
+ 
+{% block href_back %}
+href="/json/tocsv" 
+{% endblock href_back %}

@@ -1,0 +1,17 @@
+{% extends "xls/base_xls.html" %}
+{% load static %}
+
+
+{% block h1 %}
+    Convert your excel file into a html
+{% endblock h1 %}
+
+
+
+{% block form %}
+<form  method="post" action="/xls/tohtml" enctype="multipart/form-data">        
+{% endblock form %}
+
+{% block href_back %}
+href="/xls/tohtml" 
+{% endblock href_back %}

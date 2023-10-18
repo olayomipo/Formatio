@@ -1,0 +1,91 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block  content %}
+    <div>
+        <div class="row">
+            <div class="col-md-4" style="opacity: 1;">
+                <div class="content-box text-center">
+                    <a href="/img">
+                        <img title="IMAGE CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/jpg.png' %}">
+                        <h4 style="margin-top: 5px" class="content-box-title">IMAGES</h4>
+                        <p class="content-box-sub">Convert your Images.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center" style="opacity: 1;">
+                <div class="content-box" >
+                    <a href='/xls'>
+                        <img title="EXCEL CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/xls.png' %}" >
+                    
+                        <h4 style="margin-top: 5px" class="content-box-title">EXCEL</h4>
+                        <p class="content-box-sub">Convert your Excel files .</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4" style="opacity: 1;">
+                <div class="content-box text-center">
+                    <a href="/json">
+                        <img title="JSON CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/json.png' %}">
+                        <h4 style="margin-top: 5px" class="content-box-title">JSON</h4>
+                        <p class="content-box-sub">Convert your JSON files .</p>
+                    </a>
+                </div>
+            </div>            
+            <div class="col-md-4 text-center" style="opacity: 1;">
+                <div class="content-box" >
+                    <a href='/csv'>
+                        <img title="CSV CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/csv.png' %}" >
+                    
+                        <h4 style="margin-top: 5px" class="content-box-title">CSV</h4>
+                        <p class="content-box-sub">Convert your Csv files .</p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-4" style="opacity: 1;">
+                <div class="content-box text-center">
+                    <a href="/xml">
+                        <img title="XML CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/xml.png' %}">
+                        <h4 style="margin-top: 5px" class="content-box-title">XML</h4>
+                        <p class="content-box-sub">Convert your XML files .</p>
+                    </a>
+                </div>
+            </div>            
+            <div class="col-md-4" style="opacity: 1;">
+                <div class="content-box text-center">
+                    <a href="/html">
+                        <img title="HTML CONVERT" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/html.png' %}">
+                        <h4 style="margin-top: 5px" class="content-box-title">HTML</h4>
+                        <p class="content-box-sub">Convert your Html files .</p>
+                    </a>
+                </div>
+            </div>
+            {% comment %} <div class="col-md-4 text-center" style="opacity: 1;" onclick="location.href='./pdf'">
+                <div class="content-box" >
+                    <img title="JPG to PDF" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/pdf.png' %}">
+                    <h4 style="margin-top: 5px" class="content-box-title">PDF</h4>
+                    <p class="content-box-sub">Convert your Pdfs .</p>
+                </div>
+            </div>
+
+            <div class="col-md-4" style="opacity: 1;">
+                <div class="content-box text-center">
+                    <img title="PDF to DOCX" class="finbyz-icon img-responsive"
+                         src="{% static 'img/icons/docx.png' %}">
+                    <h4 style="margin-top: 5px" class="content-box-title">DOCUMENTS</h4>
+                    <p class="content-box-sub">Convert your documents</p>
+                </div>
+            </div> {% endcomment %}
+        </div>
+    </div>
+{% endblock %}

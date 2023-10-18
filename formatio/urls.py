@@ -18,6 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 
+from django.conf.urls.static import static
+
+
+handler404 = 'IMG.views.handler404'
+handler500 = 'IMG.views.handler500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,9 +33,4 @@ urlpatterns = [
     # path('download/<path:path>', views.download_file, name="download_files"),
     path('download/<path:path>', views.download_file, name="download_file"),
     # path('downloads/<path:path>', views.download_files, name="download_files"),
-    # path('csv', include('csv_f.urls')),
-    # path('html', include('HTML.urls')),
-    # path('xls', include('XLSX.urls')),
-    # path('json', include('JSON.urls')),
-    # path('pdf', include('PDF.urls')),
 ]

@@ -19,9 +19,10 @@ To-Do -
 -  XML CONVERSIONS
 -  CSV CONVERSIONS
 -  HTML CONVERSIONS
- - PDF CONVERSIONS
- - DOC CONVERSIONS
- - And much more
+-
+- PDF CONVERSIONS
+- DOC CONVERSIONS
+- And much more
 
 ## Installation instructions
 Open terminal and install required dependencies using following command -

@@ -38,26 +38,26 @@ def download_file(request, path):
 
 
 
-def download_files(request, path):
-    # 'paths' is a list of paths to the files you want to download
+# def download_files(request, path):
+#     # 'paths' is a list of paths to the files you want to download
     
-    paths = path
-    if request.method == "GET":
-        # Create a new zip file
-        zip_file_path = os.path.join(os.getcwd(), 'files.zip')
+#     paths = path
+#     if request.method == "GET":
+#         # Create a new zip file
+#         zip_file_path = os.path.join(os.getcwd(), 'files.zip')
         
-        print(zip_file_path)
+#         print(zip_file_path)
         
-        with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
-            for path in paths:
-                abs_file_path = os.path.join(os.getcwd(), path)
-                # Add each file to the zip file
-                zip_file.write(abs_file_path, arcname=os.path.basename(abs_file_path))
+#         with zipfile.ZipFile(zip_file_path, 'w') as zip_file:
+#             for path in paths:
+#                 abs_file_path = os.path.join(os.getcwd(), path)
+#                 # Add each file to the zip file
+#                 zip_file.write(abs_file_path, arcname=os.path.basename(abs_file_path))
 
-        # Create a Django response object and set the Content-Disposition header
-        response = FileResponse(open(zip_file_path, 'rb'))
-        response['Content-Disposition'] = 'attachment; filename="{}"'.format(os.path.basename(zip_file_path))
+#         # Create a Django response object and set the Content-Disposition header
+#         response = FileResponse(open(zip_file_path, 'rb'))
+#         response['Content-Disposition'] = 'attachment; filename="{}"'.format(os.path.basename(zip_file_path))
 
-        return response
+#         return response
 
 

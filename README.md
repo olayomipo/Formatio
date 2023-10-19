@@ -1,7 +1,7 @@
 
 # Formatio - made with Django
 
-![Formatio](https://github.com/olayomipo/Formatio/tree/main/static/img/formatio.png)
+![Formatio](https://raw.githubusercontent.com/olayomipo/Formatio/main/static/img/formatio.png)
 
 A file conversion app with following features - 
 

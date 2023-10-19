@@ -11,9 +11,11 @@
 
 
 {% block form %}
-<form  method="post" action="/json/tocsv" enctype="multipart/form-data">        
+    <form  method="post" action="/json/tocsv" enctype="multipart/form-data">    
+        {% csrf_token %}
+    
 {% endblock form %}
  
 {% block href_back %}
 href="/json/tocsv" 
-{% endblock href_back %}
+{% endblock href_back %} 

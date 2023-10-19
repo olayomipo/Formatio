@@ -14,7 +14,7 @@ def tocsv(request):
 
     if request.method == "POST":   
         delete_files_before('uploaded_files')
-        # print(request.FILES)     
+        print(request.FILES)     
         
         file = request.FILES['files']
 

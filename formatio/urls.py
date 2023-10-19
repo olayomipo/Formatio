@@ -28,6 +28,7 @@ handler500 = 'IMG.views.handler500'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
+    path('csv/', include('CSV.urls')),
     path('img/', include('IMG.urls')),
     path('xls/', include('XLSX.urls')),
     path('json/', include('JSON.urls')),

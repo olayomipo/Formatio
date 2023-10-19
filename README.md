@@ -1,5 +1,8 @@
 
 # Formatio - made with Django
+
+![Formatio](https://github.com/olayomipo/Formatio/tree/main/static/img/formatio.png)
+
 A file conversion app with following features - 
 
 -  IMAGES to PDF CONVERSIONS.
@@ -8,7 +11,6 @@ A file conversion app with following features -
 -  JSON TO CSV, EXCEL, HTML, XML CONVERSIONS.
 -  CSV TO JSON, EXCEL, HTML, XML CONVERSIONS.
 
-
  <!-- - . -->
 
 To-Do -
@@ -16,10 +18,8 @@ To-Do -
 -  Error 404 Page.
 -  Error 500 Page.
 -  Multiple files converted to another format
--
 -  XML CONVERSIONS
 -  HTML CONVERSIONS
--
 - PDF CONVERSIONS
 - DOC CONVERSIONS
 - And much more
@@ -37,7 +37,7 @@ Install poppler (required for JPG to PDF)
 
 Open terminal in directory where **manage** python file resides. And then execute following command -
 
-    python manage.py runserver
+    python manage.py runserver --insecure
     
 Go to browser and hit following url -
 

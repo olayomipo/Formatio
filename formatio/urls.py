@@ -26,8 +26,8 @@ handler404 = 'IMG.views.handler404'
 handler500 = 'IMG.views.handler500'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', views.home),
+    path('admin/', admin.site.urls),
     path('csv/', include('CSV.urls')),
     path('img/', include('IMG.urls')),
     path('xls/', include('XLSX.urls')),

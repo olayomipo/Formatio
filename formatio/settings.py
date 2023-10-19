@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     # 'HTML',
 ]
 
+CSRF_TRUSTED_ORIGINS = ['https://formatio-production.up.railway.app']
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

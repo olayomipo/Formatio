@@ -19,6 +19,7 @@ from django.urls import path, include
 from . import views
 
 from django.conf.urls.static import static
+from django.conf import settings
 
 
 handler404 = 'IMG.views.handler404'
@@ -33,4 +34,4 @@ urlpatterns = [
     # path('download/<path:path>', views.download_file, name="download_files"),
     path('download/<path:path>', views.download_file, name="download_file"),
     # path('downloads/<path:path>', views.download_files, name="download_files"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

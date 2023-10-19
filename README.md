@@ -6,6 +6,7 @@ A file conversion app with following features -
 -  MULTIPLE JPG to PDF CONVERSIONS.
 -  EXCEL TO CSV, JSON, HTML, XML CONVERSIONS.
 -  JSON TO CSV, EXCEL, HTML, XML CONVERSIONS.
+-  CSV TO JSON, EXCEL, HTML, XML CONVERSIONS.
 
 
  <!-- - . -->
@@ -17,7 +18,6 @@ To-Do -
 -  Multiple files converted to another format
 -
 -  XML CONVERSIONS
--  CSV CONVERSIONS
 -  HTML CONVERSIONS
 -
 - PDF CONVERSIONS

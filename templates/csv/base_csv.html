@@ -1,0 +1,92 @@
+
+
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block div__head %}
+    <div>
+            <br/>
+            <H1 style="text-align: center; font-family: 'Comic Sans MS'; color: black">
+                {% block h1 %}
+                 Convert your csv file into a csv
+                {% endblock h1 %}
+            </H1>
+        <br/>
+    </div>
+
+{% endblock div__head%}
+
+{% block  content %}
+<div>
+
+    <div>
+        {% block form %}
+            <form  method="post" action="/csv/tocsv" enctype="multipart/form-data">
+        {% endblock form %}
+        
+            {% csrf_token %}
+            <div>
+                <h5 style="text-align: center">Click the icon below to upload files</h5>
+            </div>
+            <div class="image-upload d-flex justify-content-center align-items-center">
+                <label for="files">
+                    <img src="{% static 'img/icons/upload.png' %}"/>
+                </label>
+    
+                <input id="files" type="file" name="files" accept=".csv" hidden/>
+
+                {% comment %} <input id="files" type="file" name="files" accept=".xls,.xlsx,.xlsm,.xlsb" multiple hidden/> {% endcomment %}
+
+                {% comment %} <input id="files" type="files" name="files" accept=".xls,.xlsx,.xlsm,.xlsb" multiple hidden/> {% endcomment %}
+            </div>
+            </br>
+            </br>
+            </br>
+            </br>
+            <div>
+                <h5 class="d-flex justify-content-center align-items-center" id="filecount" style="text-align: center"></h5>
+            </div>
+            <div class="buttons d-flex justify-content-center align-items-center">
+                <button id="uploadbutton" type="submit"
+                        class="btn btn-primary ">Upload
+                </button>
+                <a id="removequeue" 
+                  {% block href_back %}
+                        href="./json/tocsv" 
+                  {% endblock href_back %}
+                        type="button"
+                        class="btn btn-danger disabled" >Remove queue
+                </a>
+            </div>
+            </br>
+            </br>
+    
+        </form>
+    </div>
+
+    </br>
+
+    {% if url %}
+        <h5 style="text-align: center">Your file is ready for download.</h5>
+        </br>
+        <a style="margin:0 auto;display: block; width: 100px" type="button" class="btn btn-primary" 
+        {% comment %} href="../static/uploaded_files/jpg2pdf/{{ url }}/result.pdf"  {% endcomment %}
+        {% comment %} href="{% static 'uploaded_files/jpg2pdf' %}/{{ url }}/result.pdf" {% endcomment %}
+        {% comment %} href={% url 'download_file' path=url %} {% endcomment %}
+        {% comment %} href="{% url 'download_file' path=url%}" {% endcomment %}
+        href="{% url 'download_file' path=url %}"
+        >Download</a>
+
+
+        {% comment %} <a href="{% url 'appname.views.detail' jobID=job.id %}"> {% endcomment %}
+
+    {% endif %}
+
+    <div class="container quote-imgs-thumbs quote-imgs-thumbs--hidden" id="result" aria-live="polite"></div>
+
+</div>
+
+<script src="{% static 'js/file-upload.js' %}"></script>
+
+{% endblock %}

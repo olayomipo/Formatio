@@ -1,0 +1,17 @@
+{% extends "csv/base_csv.html" %}
+{% load static %}
+
+
+{% block h1 %}
+    Convert your csv file into a xml
+{% endblock h1 %}
+
+
+
+{% block form %}
+<form  method="post" action="/csv/toxml" enctype="multipart/form-data">        
+{% endblock form %}
+
+{% block href_back %}
+href="/csv/toxml" 
+{% endblock href_back %}

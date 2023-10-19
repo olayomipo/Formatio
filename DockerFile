@@ -2,7 +2,7 @@
 FROM python:3.10-slim
 
 # Working directory
-WORKDIR /
+WORKDIR /formatio
 
 # Copy requirements file and install dependencies
 COPY requirements.txt requirements.txt

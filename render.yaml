@@ -1,0 +1,20 @@
+   databases:
+     - name: mysite
+       databaseName: mysite
+       user: mysite
+
+   services:
+     - type: web
+       name: formatio
+       env: python
+       buildCommand: "./build.sh"
+       startCommand: "gunicorn formatio.wsgi:application"
+       envVars:
+         - key: DATABASE_URL
+           fromDatabase:
+             name: formatio
+             property: connectionString
+         - key: SECRET_KEY
+           generateValue: true
+         - key: WEB_CONCURRENCY
+           value: 4

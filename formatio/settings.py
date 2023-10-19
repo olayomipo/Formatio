@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-tkj110n(87##+w971mbc+p8)!mnuzhgm-b^awagpo3cvg_ue!o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*', 'https://formatio-production.up.railway.app']
 
 
 # Application definition

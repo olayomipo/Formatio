@@ -4,3 +4,4 @@ Django
 img2pdf
 pandas 
 pdf2image 
+gunicorn

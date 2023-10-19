@@ -1,0 +1,10 @@
+
+a {
+    color: inherit;  /* Changes the hyperlink color to the color of its parent element */
+    text-decoration: none;  /* Removes the underline */
+}
+
+a:hover {
+    color: inherit;  /* Keeps the hyperlink color the same when hovered over */
+    text-decoration: none;  /* Keeps the underline removed when hovered over */
+}

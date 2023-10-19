@@ -37,6 +37,7 @@ Install poppler (required for JPG to PDF)
 
 Open terminal in directory where **manage** python file resides. And then execute following command -
 
+    mkdir uploaded_files
     python manage.py runserver --insecure
     
 Go to browser and hit following url -
